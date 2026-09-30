@@ -22,12 +22,9 @@
   /* Motion is opt-in: only when the visitor allows it. Falls back if GSAP never arrives. */
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.documentElement.classList.add('motion');
-    setTimeout(function () { if (!window.gsap) document.documentElement.classList.remove('motion'); }, 4000);
+    setTimeout(function () { if (!window.gsap) document.documentElement.classList.remove('motion'); }, 10000);
   }
 </script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script defer src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
 <style>
 :root{
   --paper:#F5F3FF;
@@ -876,7 +873,8 @@ section{scroll-margin-top:80px}
 <div class="vibe"><button type="button" class="vibe-in" aria-label="Of course I vibe coded this. Pop the bubble">Of course I vibe coded this<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#FFD43B" stroke="#1C1446" stroke-width="2"/><circle cx="9" cy="10" r="1.3" fill="#1C1446"/><circle cx="15" cy="10" r="1.3" fill="#1C1446"/><path d="M8 14.5c1 1.4 2.4 2 4 2s3-.6 4-2" fill="none" stroke="#1C1446" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
+/* Motion libraries load after the page has painted, so they never delay first paint. */
+function initMotion() {
   var root = document.documentElement;
   if (!root.classList.contains('motion') || !window.gsap || !window.ScrollTrigger) { root.classList.remove('motion'); return; }
   gsap.registerPlugin(ScrollTrigger);
@@ -1115,8 +1113,27 @@ document.addEventListener('DOMContentLoaded', function () {
       .to({}, { duration: .15 });
   });
 
-  window.addEventListener('load', function () { ScrollTrigger.refresh(); });
-});
+  ScrollTrigger.refresh();
+}
+
+(function () {
+  if (!document.documentElement.classList.contains('motion')) return;
+  var libs = [
+    'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js',
+    'https://unpkg.com/lenis@1.1.20/dist/lenis.min.js'
+  ];
+  function next(i) {
+    if (i === libs.length) return initMotion();
+    var s = document.createElement('script');
+    s.src = libs[i];
+    s.onload = function () { next(i + 1); };
+    s.onerror = function () { i < 2 ? document.documentElement.classList.remove('motion') : initMotion(); };
+    document.head.appendChild(s);
+  }
+  function start() { next(0); }
+  if (document.readyState === 'complete') start(); else window.addEventListener('load', start);
+})();
 </script>
 </body>
 </html>
