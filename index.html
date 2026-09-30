@@ -1151,5 +1151,42 @@ function initMotion() {
   if (document.readyState === 'complete') start(); else window.addEventListener('load', start);
 })();
 </script>
+
+<!-- First-visit chooser: asks once per browser which version to show, remembers the answer. -->
+<dialog class="pick" id="pick" aria-labelledby="pick-title">
+  <p class="pick-kicker">Hi, I'm Thiraek.</p>
+  <h2 class="pick-title" id="pick-title">Which version of me do you want?</h2>
+  <div class="pick-opts">
+    <a class="pick-opt" href="/" data-v="playful"><b>Playful</b><span>Jokes, animations, Dota hours. The fun one.</span></a>
+    <a class="pick-opt" href="/pro/" data-v="pro"><b>Professional</b><span>Research, education, experience. The one for professors.</span></a>
+  </div>
+  <p class="pick-note">You can switch any time.</p>
+</dialog>
+<style>.pick{border:0;padding:clamp(24px,5vw,40px);width:min(560px,calc(100vw - 32px));border-radius:18px;box-shadow:0 24px 80px rgba(0,0,0,.28);background:var(--white);color:var(--ink)}
+.pick::backdrop{background:rgba(28,20,70,.55)}
+.pick-kicker{margin:0 0 6px;font-size:.95rem;color:var(--ink-soft)}
+.pick-title{margin:0 0 20px;font-family:var(--display);font-size:clamp(1.4rem,4vw,1.9rem);line-height:1.15}
+.pick-opts{display:grid;gap:12px}
+.pick-opt{display:block;padding:16px 18px;border:2px solid var(--ink);border-radius:18pxS;color:inherit;text-decoration:none;transition:border-color .15s,background-color .15s}
+.pick-opt:hover,.pick-opt:focus-visible{border-color:var(--cobalt);background:#FFF6CC;outline:none}
+.pick-opt b{display:block;font-family:var(--display);font-size:1.15rem;margin-bottom:2px}
+.pick-opt span{font-size:.95rem;color:var(--ink-soft)}
+.pick-note{margin:16px 0 0;font-size:.85rem;color:var(--ink-soft)}
+@media print{.pick{display:none}}</style>
+<script>
+(function () {
+  var d = document.getElementById('pick'), here = 'playful', seen = null;
+  try { seen = localStorage.getItem('srath-version'); } catch (e) {}
+  if (seen || !d || !d.showModal) return;
+  d.querySelectorAll('.pick-opt').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      try { localStorage.setItem('srath-version', a.dataset.v); } catch (err) {}
+      if (a.dataset.v === here) { e.preventDefault(); d.close(); }
+    });
+  });
+  d.addEventListener('cancel', function () { try { localStorage.setItem('srath-version', here); } catch (err) {} });
+  d.showModal();
+})();
+</script>
 </body>
 </html>
