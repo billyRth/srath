@@ -283,6 +283,8 @@ section{scroll-margin-top:80px}
 @media (prefers-reduced-motion:no-preference){.now-dot{animation:live 2s ease-out infinite}}
 @keyframes live{0%{box-shadow:0 0 0 0 rgba(31,163,122,.55)}70%{box-shadow:0 0 0 9px rgba(31,163,122,0)}100%{box-shadow:0 0 0 0 rgba(31,163,122,0)}}
 
+/* skip layout of far-below sections until they near the viewport (first-paint cost) */
+#research,#lab,#experience,#community,#projects,#skills,#hobbies{content-visibility:auto;contain-intrinsic-size:auto 1100px}
 /* joke tally */
 .tally{margin:clamp(56px,7vw,88px) 0 0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:3px solid var(--ink)}
 .tally div{padding:16px 16px 4px 0;display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:6px}
@@ -1114,6 +1116,13 @@ function initMotion() {
   });
 
   ScrollTrigger.refresh();
+  /* sections render lazily (content-visibility), so re-measure when the page height settles */
+  var rt, lastH = document.body.scrollHeight;
+  new ResizeObserver(function () {
+    if (document.body.scrollHeight === lastH) return;
+    lastH = document.body.scrollHeight;
+    clearTimeout(rt); rt = setTimeout(function () { ScrollTrigger.refresh(); }, 250);
+  }).observe(document.body);
 }
 
 (function () {
