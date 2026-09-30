@@ -907,7 +907,7 @@ document.addEventListener('DOMContentLoaded', function () {
   gsap.from(route, { strokeDashoffset: 1600, duration: 2.2, ease: 'power2.inOut', delay: .3 });
   gsap.to('.sticker-spin', { rotation: 120, transformOrigin: '50% 50%', ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
   gsap.from('.sticker', { opacity: 0, scale: .85, duration: .8, ease: 'expo.out', delay: .9 });
-  gsap.from('.hero-sub > *', { y: 24, opacity: 0, duration: .9, stagger: .1, ease: 'expo.out', delay: .6 });
+  gsap.from('.hero-sub > *', { y: 24, duration: .9, stagger: .1, ease: 'expo.out', delay: .2 });
 
   var heroChars = gsap.utils.toArray('.hero-name .ch');
   if (finePointer) {
