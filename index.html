@@ -66,6 +66,9 @@ p{margin:0 0 1em}
 /* header */
 .site-head{position:fixed;inset:12px 12px auto;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:12px;pointer-events:none}
 .site-head > *{pointer-events:auto}
+/* switch to the professional page: a fixed corner pill, inside .site-head so the glove steers clear of it */
+.pro-switch{position:fixed;right:12px;bottom:12px;display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;background:var(--white);color:var(--ink);border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);font-weight:700;font-size:.9rem;text-decoration:none;white-space:nowrap}
+.pro-switch:hover{background:var(--ink);color:var(--white)}
 .mono{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 18px;border-radius:999px;background:var(--yellow);color:var(--ink);font-family:var(--display);font-weight:800;font-size:1.05rem;text-decoration:none;font-variation-settings:"wdth" 105;box-shadow:3px 3px 0 var(--ink)}
 .nav{display:flex;gap:2px;padding:5px;background:var(--paper);border:2px solid var(--ink);border-radius:999px;box-shadow:3px 3px 0 var(--ink);overflow-x:auto;scrollbar-width:none;max-width:calc(100vw - 130px)}
 .nav a{padding:.45em .9em;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem;white-space:nowrap}
@@ -391,6 +394,8 @@ section{scroll-margin-top:80px}
   .nav{padding:4px}
   .nav a{padding:.45em .34em;font-size:.82rem}
   .vibe-in{font-size:.78rem;padding:.4em .65em}
+  .pro-switch{min-height:40px;padding:0 13px;font-size:.82rem}
+  .foot{padding-bottom:56px}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition:none !important;animation:none !important}
@@ -428,6 +433,7 @@ section{scroll-margin-top:80px}
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
+  <a class="pro-switch" href="/pro/">Professional version</a>
 </header>
 
 <main id="main" tabindex="-1">
@@ -1087,7 +1093,7 @@ function initMotion() {
   var vibe = document.querySelector('.vibe'), vin = vibe.querySelector('.vibe-in');
   function spot() {
     var m = innerWidth < 600 ? 12 : 32, w = vibe.offsetWidth, h = vibe.offsetHeight;
-    return { x: gsap.utils.random(m, Math.max(m, innerWidth - w - m)), y: gsap.utils.random(84, Math.max(84, innerHeight - h - m)) };
+    return { x: gsap.utils.random(m, Math.max(m, innerWidth - w - m)), y: gsap.utils.random(84, Math.max(84, innerHeight - h - m - 64)) };
   }
   function wander() { var s = spot(); gsap.to(vibe, { x: s.x, y: s.y, duration: gsap.utils.random(6, 9), ease: 'sine.inOut', onComplete: wander }); }
   function gone() { gsap.killTweensOf([vibe, vin]); vibe.remove(); }
