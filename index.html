@@ -10,7 +10,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://srath.onrender.com/">
 <meta property="og:title" content="Sophoanthiraek (Thiraek) Rath | Civil engineering student and vibe coder">
-<meta property="og:description" content="Cambodia, then Australia, then Japan: my transport research, my papers and the apps I vibe-code at 2am.">
+<meta property="og:description" content="Cambodia, then Australia, then Japan: my transport research, my papers and the apps I vibe-code.">
 <meta property="og:site_name" content="Thiraek Rath">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -289,7 +289,7 @@ section{scroll-margin-top:80px}
 /* skip layout of far-below sections until they near the viewport (first-paint cost) */
 #research,#lab,#experience,#community,#projects,#skills,#hobbies{content-visibility:auto;contain-intrinsic-size:auto 1100px}
 /* joke tally */
-.tally{margin:clamp(56px,7vw,88px) 0 0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:3px solid var(--ink)}
+.tally{margin:clamp(56px,7vw,88px) 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:3px solid var(--ink)}
 .tally div{padding:16px 16px 4px 0;display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:6px}
 .tally div + div{padding-left:16px;border-left:2px solid var(--ink)}
 .tally dd{margin:0;font-family:var(--display);font-weight:850;font-size:clamp(1.5rem,2.6vw,2.3rem);line-height:1;font-variation-settings:"wdth" 85;color:var(--cobalt)}
@@ -346,9 +346,9 @@ section{scroll-margin-top:80px}
 
 /* reveals start hidden only with motion; GSAP brings them in */
 @media (max-width:1000px){
-  .tally{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .tally div:nth-child(4){padding-left:0;border-left:0}
-  .tally div:nth-child(n+4){border-top:2px solid var(--ink);margin-top:12px}
+  .tally{grid-template-columns:1fr 1fr}
+  .tally div:nth-child(3){padding-left:0;border-left:0}
+  .tally div:nth-child(n+3){border-top:2px solid var(--ink);margin-top:12px}
   .names ol{grid-template-columns:1fr 1fr}
   .names li,.names li + li{padding:16px 16px 16px 0;border-left:0;border-bottom:2px solid var(--ink)}
   .names li:nth-child(even){padding-left:16px;border-left:2px solid var(--ink)}
@@ -461,10 +461,10 @@ section{scroll-margin-top:80px}
         <div>
           <p class="hero-full"><b>Sophoanthiraek Rath</b>, Thiraek for short.</p>
           <p class="hero-where"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Tokyo now. Cambodia and Australia twice each before that.</p>
-          <p class="hero-lede"><strong>Civil engineer in training, vibe coder by accident.</strong>By day I study how people move through cities at Shibaura Institute of Technology. By night I describe app ideas to Claude until 2am. Fair warning: I can't code. I vibe.</p>
+          <p class="hero-lede"><strong>Civil engineer in training, vibe coder by accident.</strong>By day I study how people move through cities at Shibaura Institute of Technology. In my free time I describe app ideas to Claude. I can't code, I vibe.</p>
         </div>
         <div class="hero-actions">
-          <a class="btn btn-solid magnet" href="#journey"><svg class="icon" aria-hidden="true"><use href="#i-plane"/></svg>Board the journey</a>
+          <a class="btn btn-solid magnet" href="#journey"><svg class="icon" aria-hidden="true"><use href="#i-plane"/></svg>See my journey</a>
           <a class="btn btn-ghost magnet" href="#projects">See what I built</a>
         </div>
       </div>
@@ -483,10 +483,10 @@ section{scroll-margin-top:80px}
       <h2 class="sec-title reveal-title" id="about-title">About</h2>
       <div class="about-grid">
         <div>
-          <p class="about-big split-words">I'm a Cambodian civil engineering student in my fourth year at Shibaura Institute of Technology in Tokyo. I research how cities move in the Mobility &amp; Infrastructure Laboratory. After hours I vibe-code apps: I'm the ideas guy, Claude is the entire engineering department.</p>
+          <p class="about-big split-words">I'm a Cambodian civil engineering student in my fourth year at Shibaura Institute of Technology in Tokyo. I research how cities move in the Mobility &amp; Infrastructure Laboratory. After hours I vibe-code apps: I come up with the ideas and Claude writes the code.</p>
           <figure class="idphoto">
             <img src="thiraek.webp" width="215" height="229" alt="Thiraek Rath" loading="lazy" decoding="async">
-            <figcaption>Passport photo<small>Valid for Tokyo, Phnom Penh and anywhere with good wifi</small></figcaption>
+            <figcaption>That's me<small>Sophoanthiraek Rath</small></figcaption>
           </figure>
         </div>
         <div>
@@ -494,23 +494,23 @@ section{scroll-margin-top:80px}
           <p class="now"><span class="now-dot" aria-hidden="true"></span><b>Currently:</b> finishing my thesis and preparing for grad school.</p>
         <dl class="facts">
           <div><dt>Full name</dt><dd>Sophoanthiraek Rath. Thiraek to most, Billy to some.</dd></div>
-          <div><dt>Based in</dt><dd>Tokyo, Japan. I traded Phnom Penh heat and Sydney beaches for Tokyo trains.</dd></div>
+          <div><dt>Based in</dt><dd>Tokyo, Japan, after Phnom Penh and Sydney.</dd></div>
           <div><dt>From</dt><dd>Cambodia. Khmer is my first language.</dd></div>
           <div><dt>Studying</dt><dd>B.Eng. (Honours) in Civil Engineering: Infrastructure &amp; Mobility, 4th year, Shibaura Institute of Technology</dd></div>
           <div><dt>Lab</dt><dd>Mobility &amp; Infrastructure Laboratory, with Prof. Yiping Le as my supervisor</dd></div>
           <div><dt>Research</dt><dd>About 3 years of transport and urban mobility</dd></div>
-          <div><dt>Graduating</dt><dd>March 2027. That's the plan, anyway.</dd></div>
+          <div><dt>Graduating</dt><dd>March 2027</dd></div>
         </dl>
         </div>
       </div>
       <div class="names">
         <h3>What do I call you?</h3>
         <ol>
-          <li><b>Sophoanthiraek</b><p>My full name. It's a long one, so people call me Thiraek.</p></li>
-          <li><b>Thiraek</b><p>What most people call me. The short cut through the long name.</p></li>
+          <li><b>Sophoanthiraek</b><p>My full name. It's a long one, so most people shorten it.</p></li>
+          <li><b>Thiraek</b><p>What most people call me.</p></li>
           <li><b>Bill</b><p>What my family calls me, my nickname since birth. It's also the one I hand out when people can't read Khmer names.</p></li>
-          <li><b>Billy</b><p>Then Australians added the -y. I liked it, so I kept it.</p></li>
-          <li><del><b>Young William</b></del><p>My host father in Australia's pick. Too posh, so I dropped it real quick.</p></li>
+          <li><b>Billy</b><p>What Australians call me. They added the -y and I kept it.</p></li>
+          <li><del><b>Young William</b></del><p>From my host father in Australia. Too posh, so I dropped it quickly.</p></li>
         </ol>
       </div>
     </div>
@@ -519,8 +519,8 @@ section{scroll-margin-top:80px}
 
   <section class="journey" id="journey" aria-labelledby="journey-title">
     <div class="wrap journey-head">
-      <h2 class="sec-title reveal-title" id="journey-title">My study route</h2>
-      <p class="sec-intro">Cambodia, Melbourne, Cambodia again, Sydney, Tokyo. Five legs, one boarding pass each, zero lost luggage (so far).</p>
+      <h2 class="sec-title reveal-title" id="journey-title">Journey</h2>
+      <p class="sec-intro">Where I've studied so far: Melbourne, Cambodia, Sydney and Tokyo, with a master's in Japan next.</p>
     </div>
     <div class="wrap stage">
       <figure class="map">
@@ -558,7 +558,7 @@ section{scroll-margin-top:80px}
           <div class="pass-main">
             <span class="pass-leg">Leg 1 of 5 &middot; PNH &rarr; MEL</span>
             <h3>Melbourne</h3>
-            <p>Born in Cambodia, then off to Australia before I could spell it. My first school was kindergarten in Glen Waverley.</p>
+            <p>I was born in Cambodia and moved to Australia when I was very young. My first school was kindergarten in Glen Waverley.</p>
             <dl class="pass-meta">
               <div><dt>Suburb</dt><dd>Glen Waverley</dd></div>
               <div><dt>Class</dt><dd>Kindergarten</dd></div>
@@ -572,26 +572,25 @@ section{scroll-margin-top:80px}
           <div class="pass-main">
             <span class="pass-leg">Leg 2 of 5 &middot; MEL &rarr; PNH</span>
             <h3>Cambodia</h3>
-            <p>Return flight at age 5. I grew up back home at Zaman International School (now Paragon International School) and stayed until Year 10.</p>
+            <p>I moved back when I was 5 and grew up at Zaman International School (now Paragon International School) and stayed until Year 10.</p>
             <dl class="pass-meta">
               <div><dt>School</dt><dd>Zaman International (now Paragon)</dd></div>
               <div><dt>Stayed</dt><dd>Up to Year 10</dd></div>
             </dl>
           </div>
           <div class="pass-stub" aria-hidden="true"><span class="pass-code">PNH</span><span class="barcode"></span></div>
-          <div class="stamp" aria-hidden="true">Return<br>flight</div>
+          <div class="stamp" aria-hidden="true">Home<br>again</div>
         </li>
 
         <li class="pass" style="--c:var(--sky);--sc:#1F5FAF;--r:-5deg">
           <div class="pass-main">
             <span class="pass-leg">Leg 3 of 5 &middot; PNH &rarr; SYD</span>
             <h3>Sydney</h3>
-            <p>Australia, round two. I finished high school in Sydney, then gave a diploma at UTS a short go before Japan came calling.</p>
+            <p>Back to Australia. I finished high school in Sydney, then briefly started a diploma at UTS before moving to Japan.</p>
             <dl class="pass-meta">
               <div><dt>School</dt><dd>Homebush Boys High School</dd></div>
               <div><dt>Years</dt><dd>Year 10 to 12</dd></div>
               <div><dt>Then</dt><dd>A diploma at UTS, briefly</dd></div>
-              <div><dt>Seat</dt><dd>Window, obviously</dd></div>
             </dl>
           </div>
           <div class="pass-stub" aria-hidden="true"><span class="pass-code">SYD</span><span class="barcode"></span></div>
@@ -607,7 +606,7 @@ section{scroll-margin-top:80px}
               <div><dt>School</dt><dd>Shibaura Institute of Technology</dd></div>
                             <div><dt>Supervisor</dt><dd>Prof. Yiping Le</dd></div>
               <div><dt>Until</dt><dd>March 2027</dd></div>
-              <div><dt>Layovers</dt><dd>Exchanges at HUST, Vietnam and TU Wien, Vienna</dd></div>
+              <div><dt>Exchanges</dt><dd>Exchanges at HUST, Vietnam and TU Wien, Vienna</dd></div>
             </dl>
           </div>
           <div class="pass-stub" aria-hidden="true"><span class="pass-code">TYO</span><span class="barcode"></span></div>
@@ -618,7 +617,7 @@ section{scroll-margin-top:80px}
           <div class="pass-main">
             <span class="pass-leg">Leg 5 of 5</span>
             <h3>Next</h3>
-            <p>Final boarding call: I'm applying for a master's in Japan, starting April 2027. Wish me luck.</p>
+            <p>I'm applying for a master's in Japan, starting April 2027. Wish me luck.</p>
             <dl class="pass-meta">
               <div><dt>Destination</dt><dd>Master's, Japan</dd></div>
               <div><dt>Departs</dt><dd>April 2027</dd></div>
@@ -634,7 +633,7 @@ section{scroll-margin-top:80px}
   <section class="sec" id="research" aria-labelledby="research-title">
     <div class="wrap">
       <h2 class="sec-title reveal-title" id="research-title">Research</h2>
-      <p class="sec-intro">Would you ride in a car with no driver? I ask people in four countries. I also watch Phnom Penh grow along its main roads, one satellite image at a time.</p>
+      <p class="sec-intro">Would you ride in a car with no driver? I ask people in four countries: the US, France, Japan and China. I also map how Phnom Penh has grown along its main roads using satellite images.</p>
       <ul class="pubs">
         <li class="pub" style="--c:var(--yellow)">
           <div>
@@ -646,23 +645,23 @@ section{scroll-margin-top:80px}
         <li class="pub" style="--c:var(--yellow)">
           <div>
             <h3>Trends in public acceptance of autonomous vehicles: a systematic review of global research from 2019 to 2023</h3>
-            <p class="authors">Rath, S. &amp; Le, Y. I read 135 studies for this one. Yes, all of them.</p>
+            <p class="authors">Rath, S. &amp; Le, Y. A review of 135 studies.</p>
           </div>
           <div class="pub-status"><span class="tag">Submitted</span><p>Transportation Research Interdisciplinary Perspectives</p></div>
         </li>
         <li class="pub" style="--c:var(--orange)">
           <div>
             <h3>Monitoring urban expansion of Phnom Penh along six national road corridors, 2005–2025</h3>
-            <p class="authors">I'm leading the team. Landsat imagery, Google Earth Engine and a random forest doing the heavy lifting.</p>
+            <p class="authors">I lead the team. Landsat imagery, Google Earth Engine and a random forest classifier.</p>
           </div>
           <div class="pub-status"><span class="tag">In progress</span><p>Urban Research Competition, Cambodia's Ministry of Land Management (MLMUPC) and UN-Habitat, 2026</p></div>
         </li>
       </ul>
       <div class="more">
-        <h3>Other rabbit holes</h3>
+        <h3>Other research</h3>
         <ul>
           <li><b>Tsunami risk in Shizuoka</b>Mapped elderly vulnerability in ArcGIS and found 12,000+ residents who need a better evacuation plan. Spring 2023.</li>
-          <li><b>Tsukuba Express vs. Rinkai Line</b>How two train lines shape the land around them, with 1.5 km buffers and a lot of TOD thinking. Fall 2023.</li>
+          <li><b>Tsukuba Express vs. Rinkai Line</b>How two train lines shape the land around them, using 1.5 km buffers and transit-oriented development analysis. Fall 2023.</li>
           <li><b>Train, car or maglev?</b>A multinomial logit model on the Swissmetro dataset, in Python. Fall 2024.</li>
           <li><b>AV adoption in Japan</b>Designing the survey and the predictive model for who will ride. Spring 2025 to now.</li>
         </ul>
@@ -674,7 +673,7 @@ section{scroll-margin-top:80px}
 
   <section class="sec lab" id="lab" aria-labelledby="lab-title">
     <div class="wrap">
-      <h2 class="sec-title reveal-title" id="lab-title">The lab</h2>
+      <h2 class="sec-title reveal-title" id="lab-title">Lab</h2>
       <div class="lab-grid">
         <figure class="labphoto">
           <img srcset="lab-800.webp 800w, lab-1400.webp 1400w" sizes="(min-width: 1100px) 620px, (min-width: 821px) 52vw, calc(100vw - 32px)" src="lab-800.webp" width="1400" height="933" loading="lazy" decoding="async" alt="Mobility &amp; Infrastructure Lab graduation photo, 2025, Shibaura Institute of Technology">
@@ -683,7 +682,7 @@ section{scroll-margin-top:80px}
           <p class="lab-lede">My home base in Tokyo is the Mobility &amp; Infrastructure Laboratory at Shibaura Institute of Technology, Toyosu Campus. Officially 楽研究室. Le Lab for short, after Prof. Yiping Le, who supervises me.</p>
           <dl class="facts">
             <div><dt>What we do</dt><dd>Support the movement of people and goods, and build a sustainable social foundation under it: transport, tourism, logistics and urban systems.</dd></div>
-            <div><dt>What I do</dt><dd>My autonomous vehicle papers and the Phnom Penh mapping project both started here. Most of my train opinions did too.</dd></div>
+            <div><dt>What I do</dt><dd>My autonomous vehicle papers and the Phnom Penh mapping project both started here.</dd></div>
             <div><dt>Also</dt><dd>I'm a TA for Introduction to Transport Systems, then Mobility and Regional Development.</dd></div>
           </dl>
           <p class="lab-link"><a class="link-pill" href="https://lab.suisuitabi.org/index_en.html" target="_blank" rel="noopener">Visit the lab website<span class="vh"> (opens in a new tab)</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
@@ -694,20 +693,20 @@ section{scroll-margin-top:80px}
 
   <section class="sec" id="experience" aria-labelledby="experience-title">
     <div class="wrap">
-      <h2 class="sec-title reveal-title" id="experience-title">Day jobs</h2>
-      <p class="sec-intro">When I'm not writing papers or bossing Claude around, I'm teaching transport or crawling around airports.</p>
+      <h2 class="sec-title reveal-title" id="experience-title">Experience</h2>
+      <p class="sec-intro">Outside research, I am a teaching assistant for transport classes and have interned at Cambodia's airports.</p>
       <ul class="pubs jobs">
         <li class="pub" style="--c:var(--sky)">
           <div>
             <h3>Teaching Assistant, Shibaura Institute of Technology</h3>
-            <p class="authors">I help run Introduction to Transport Systems, then Mobility and Regional Development. Students ask the questions, I pretend I wasn't asking the same ones two years ago.</p>
+            <p class="authors">I help run Introduction to Transport Systems, then Mobility and Regional Development. Not long ago I was asking the same questions the students ask now.</p>
           </div>
           <div class="pub-status"><span class="tag">Sep 2024 to now</span><p>Tokyo</p></div>
         </li>
         <li class="pub" style="--c:var(--sky)">
           <div>
             <h3>Technical &amp; Maintenance Intern, Cambodia Airports (SCA)</h3>
-            <p class="authors">Technical docs and floor plans in the engineering department at Pochentong International Airport and the new Techo International Airport. Finally, a boarding pass that let me behind the gate.</p>
+            <p class="authors">Technical docs and floor plans in the engineering department at Pochentong International Airport and the new Techo International Airport.</p>
           </div>
           <div class="pub-status"><span class="tag">Jul to Aug 2025</span><p>Phnom Penh</p></div>
         </li>
@@ -722,8 +721,8 @@ section{scroll-margin-top:80px}
         <p class="lab-lede">CSAJ, the Cambodian Students' Association in Japan, looks after Cambodian students all over the country: Kanto, Kansai, Nagoya, Hiroshima and Kyushu.</p>
         <div>
           <dl class="facts">
-            <div><dt>My 2026 roles</dt><dd>Public Relations member and Education member. Two teams at once. My calendar has opinions about this.</dd></div>
-            <div><dt>Doing PR</dt><dd>I promote Khmer events to people who already speak Khmer. Friendliest crowd I'll ever have.</dd></div>
+            <div><dt>My 2026 roles</dt><dd>Public Relations member and Education member. Two teams at once.</dd></div>
+            <div><dt>Doing PR</dt><dd>I help with public relations and education for Cambodian students across Japan.</dd></div>
             <div><dt>Also made</dt><dd>Their new website (it's in my projects below) and the graduation posters.</dd></div>
           </dl>
           <p class="lab-link"><a class="link-pill" href="https://www.csaj-khmer.org/" target="_blank" rel="noopener">Visit CSAJ<span class="vh"> (opens in a new tab)</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
@@ -734,57 +733,57 @@ section{scroll-margin-top:80px}
 
   <section class="sec projects" id="projects" aria-labelledby="projects-title">
     <div class="wrap">
-      <h2 class="sec-title reveal-title" id="projects-title">Vibe-coded</h2>
-      <p class="sec-intro">Disclaimer: I am not a developer. I describe the idea, Claude writes every line of code, and I squint at it and say "make it pop". Somehow real people use these.</p>
+      <h2 class="sec-title reveal-title" id="projects-title">Projects</h2>
+      <p class="sec-intro">I'm not a developer. I describe the idea, Claude writes the code, and I test it until it works.</p>
       <ul class="cards">
         <li class="card" style="--c:var(--orange)">
           <span class="badge" aria-hidden="true"><svg class="icon"><use href="#i-utensils"/></svg></span>
           <h3>KhMenu</h3>
-          <p>QR menus and table ordering for restaurants in Cambodia. You order from your phone, the staff get a live ping. No more waving at the waiter.</p>
+          <p>QR menus and table ordering for restaurants in Cambodia. You order from your phone, the staff get a live ping.</p>
           <ul class="stack"><li class="lbl">Claude used</li><li>React</li><li>Supabase</li></ul>
           <a class="go" href="https://kh-emenu.onrender.com" rel="noopener">Open KhMenu <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </li>
         <li class="card" style="--c:var(--mint)">
           <span class="badge" aria-hidden="true"><svg class="icon"><use href="#i-repeat"/></svg></span>
           <h3>SubWise</h3>
-          <p>Every subscription you forgot about, in one place, plus step-by-step guides to cancel each one. Your bank account says thanks.</p>
+          <p>Every subscription you forgot about, in one place, plus step-by-step guides to cancel each one.</p>
           <a class="go" href="https://subwise-nc4x.onrender.com" rel="noopener">Open SubWise <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </li>
         <li class="card" style="--c:var(--lilac)">
           <span class="badge" aria-hidden="true"><svg class="icon"><use href="#i-receipt"/></svg></span>
           <h3>AI Invoice &amp; BOQ</h3>
-          <p>Describe a job in plain English, get a proper invoice. Describe a project, get a construction Bill of Quantities. My degree and my laptop finally met.</p>
+          <p>Describe a job in plain English, get a proper invoice. Describe a project, get a construction Bill of Quantities.</p>
           <ul class="stack"><li class="lbl">Claude used</li><li>Node</li><li>Express</li><li>AI</li></ul>
           <a class="go" href="https://github.com/billyRth/invoice-backend" rel="noopener">View on GitHub <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </li>
         <li class="card" style="--c:var(--yellow)">
           <span class="badge" aria-hidden="true"><svg class="icon"><use href="#i-users"/></svg></span>
           <h3>CSAJ-Khmer</h3>
-          <p>A fresh new website for the Cambodian Students Association in Japan. Built for my own people.</p>
+          <p>A new website for the Cambodian Students' Association in Japan, the community I'm part of.</p>
           <a class="go" href="https://csaj-preview.onrender.com" rel="noopener">Open the preview <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </li>
         <li class="card" style="--c:var(--sky)">
           <span class="badge" aria-hidden="true"><svg class="icon"><use href="#i-wallet"/></svg></span>
           <h3>jeakLuy</h3>
-          <p>A trip expense splitter. The name means "split money" in Khmer, which is also the most-said phrase on any group trip.</p>
+          <p>A trip expense splitter. The name means "split money" in Khmer.</p>
           <span class="soon">Private build</span><!-- TODO: jeakLuy live URL -->
         </li>
         <li class="card" style="--c:var(--white)">
           <span class="badge" aria-hidden="true"><svg class="icon"><use href="#i-sparkles"/></svg></span>
           <h3 class="long">theconvenience<wbr>store</h3>
-          <p>My own Shopify store with a custom theme, run as a real little business. It actually made a profit, which surprised everyone, including me. It's closed now.</p>
+          <p>My own Shopify store with a custom theme, run as a small business. It made a profit before I closed it.</p>
           <ul class="stack"><li class="lbl">Claude used</li><li>Shopify</li><li>Liquid</li></ul>
-          <span class="soon">Closed &middot; safely landed</span>
+          <span class="soon">Closed</span>
         </li>
       </ul>
-      <p class="also">Also on my record: demo sites for small businesses in Phnom Penh, and graduation posters for CSAJ.</p>
+      <p class="also">I've also made demo sites for small businesses in Phnom Penh, and graduation posters for CSAJ.</p>
     </div>
   </section>
 
   <section class="sec" id="skills" aria-labelledby="skills-title">
     <div class="wrap">
       <h2 class="sec-title reveal-title" id="skills-title">Skills</h2>
-      <p class="sec-intro">Four lines, one network: what I research, how I vibe, what I engineer with, and the languages I switch between (sometimes mid-sentence).</p>
+      <p class="sec-intro">Four lines: research, vibe coding, engineering tools and the languages I speak.</p>
       <div class="lines">
         <div class="line" style="--c:var(--cobalt)">
           <h3>Research line</h3>
@@ -792,7 +791,7 @@ section{scroll-margin-top:80px}
         </div>
         <div class="line" style="--c:var(--orange)">
           <h3>Vibe line</h3>
-          <ul><li>Having ideas</li><li>Describing them to Claude</li><li>"Make it pop"</li><li>Clicking deploy</li><li>Running a Shopify store</li></ul>
+          <ul><li>Having ideas</li><li>Describing them to Claude</li><li>Testing what it builds</li><li>Clicking deploy</li><li>Running a Shopify store</li></ul>
           <p class="line-note">React, Supabase, Node and friends: stuff Claude knows so I don't have to.</p>
         </div>
         <div class="line" style="--c:var(--sky)">
@@ -827,12 +826,12 @@ section{scroll-margin-top:80px}
         <div>
           <ul class="hob-list">
             <li><b>MMA, kickboxing, grappling</b><p>I'm addicted to combat sports. I train at Fighting Glanz Ikebukuro, <a href="https://reise-fightingglanz.com/" target="_blank" rel="noopener">my gym<span class="vh"> (opens in a new tab)</span></a>.</p></li>
-            <li><b>Video games</b><p>Dota 2 and UFC 5. My Dota 2 playtime is creeping up on 10,000 hours (please don't do the math). UFC 5 counts as theory homework for the gym. My thumbs agree.</p></li>
-            <li><b>Superheroes</b><p>Marvel and DC, both. There was a phase where I spent hundreds on physical comic books. I call it a collection. My wallet calls it something else.</p></li>
+            <li><b>Video games</b><p>Dota 2 and UFC 5. My Dota 2 playtime is creeping up on 10,000 hours.</p></li>
+            <li><b>Superheroes</b><p>Marvel and DC, both. At one point I spent hundreds on physical comic books.</p></li>
             <li><b>Discord with friends</b><p>I hear their voices more than my parents' voices.</p></li>
             <li><b>Learning Japanese</b><p>Every day. Getting better, I hope.</p></li>
-            <li><b>Travelling</b><p>See the map above. I don't sit still for long.</p></li>
-            <li><b>Vibe coding</b><p>Obviously. No shame in that.</p></li>
+            <li><b>Travelling</b><p>See the map above.</p></li>
+            <li><b>Vibe coding</b><p>See my projects above.</p></li>
           </ul>
           <div class="not-hobbies">
             <p class="nh-title">Not hobbies</p>
@@ -846,9 +845,7 @@ section{scroll-margin-top:80px}
       <dl class="tally">
         <div><dt>Papers read</dt><dd class="count" data-n="135">135</dd></div>
         <div><dt>Lines of code I wrote myself</dt><dd>0</dd></div>
-        <div><dt>Apps Claude built for me</dt><dd class="word">Too many to admit</dd></div>
         <div><dt>Roombas employed</dt><dd class="count" data-n="1">1</dd></div>
-        <div><dt>Dota losses</dt><dd class="word">Classified</dd></div>
         <div><dt>Countries lived in</dt><dd class="count" data-n="3">3</dd></div>
       </dl>
     </div>
@@ -863,17 +860,15 @@ section{scroll-margin-top:80px}
       <p class="asks-title">Ask me about</p>
       <ul class="asks">
         <li>Why Tokyo trains beat Sydney trains</li>
-        <li>Dota hero advice (please don't)</li>
         <li>How I vibe coded a business</li>
-        <li>Surviving 135 papers</li>
-        <li>MMA vs thesis stress</li>
+        <li>MMA and combat sports</li>
         <li>Khmer food spots in Tokyo</li>
       </ul>
-      <p class="contact-lede">Let's be honest: if you made it to this website, you probably already have my Facebook. Message me there. I reply faster than I read 135 papers.</p>
+      <p class="contact-lede">If you made it to this website, you probably already have my Facebook. Message me there.</p>
     </div>
     <footer class="wrap foot">
       <p>&copy; 2026 Sophoanthiraek Rath</p>
-      <p>Made in Tokyo with Claude Code. No autonomous vehicles were harmed.</p>
+      <p>Made in Tokyo with Claude Code.</p>
     </footer>
   </section>
 </main>
