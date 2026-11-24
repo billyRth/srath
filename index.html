@@ -66,7 +66,7 @@ p{margin:0 0 1em}
 /* header */
 .site-head{position:fixed;inset:12px 12px auto;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:12px;pointer-events:none}
 .site-head > *{pointer-events:auto}
-/* switch to the professional page: a fixed corner pill, inside .site-head so the glove steers clear of it */
+/* switch to the professional page: a fixed corner pill, inside .site-head */
 .pro-switch{position:fixed;right:12px;bottom:12px;display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;background:var(--white);color:var(--ink);border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);font-weight:700;font-size:.9rem;text-decoration:none;white-space:nowrap}
 .pro-switch:hover{background:var(--ink);color:var(--white)}
 .mono{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 18px;border-radius:999px;background:var(--yellow);color:var(--ink);font-family:var(--display);font-weight:800;font-size:1.05rem;text-decoration:none;font-variation-settings:"wdth" 105;box-shadow:3px 3px 0 var(--ink)}
@@ -215,27 +215,6 @@ section{scroll-margin-top:80px}
 .link-pill{display:inline-flex;align-items:center;gap:.5em;font-weight:700;text-decoration:none;border:2px solid var(--ink);border-radius:999px;padding:.55em 1.1em;background:var(--white);box-shadow:3px 3px 0 var(--ink);transition:transform .2s,box-shadow .2s}
 .link-pill:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}
 
-/* projects */
-.projects{background:var(--ink);color:var(--paper)}
-.projects .sec-intro{color:#CFC8F5}
-.projects .sec-title{color:var(--paper)}
-.cards{list-style:none;margin:56px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:28px;perspective:1100px}
-.card{position:relative;background:var(--c);color:var(--ink);border-radius:22px;padding:28px 26px 26px;min-height:300px;display:flex;flex-direction:column;border:3px solid var(--paper);transform-style:preserve-3d}
-.card h3{padding-right:60px;font-size:clamp(1.9rem,3.4vw,2.5rem);font-variation-settings:"wdth" 90;margin-bottom:.35em;transform:translateZ(20px)}
-.card h3.long{font-size:clamp(1.6rem,2.8vw,2.1rem)}
-.card p{margin-bottom:18px;transform:translateZ(12px)}
-.card .stack{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0 0 20px;padding:0;font-size:.85rem;font-weight:700}
-.card .stack li{border:2px solid var(--ink);border-radius:999px;padding:.05em .7em}
-.card .stack .lbl{border-color:transparent;padding-left:0;font-weight:400;font-style:italic}
-.line-note{margin:14px 0 0;font-size:1rem;color:var(--ink-soft);font-style:italic}
-.card .go{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:.5em;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:700;padding:.65em 1.1em;border-radius:999px;transform:translateZ(24px)}
-.card .go:hover{background:var(--white);color:var(--ink)}
-.card .go .icon{transition:transform .3s}
-.card .go:hover .icon{transform:translate(3px,-3px)}
-.card .soon{margin-top:auto;align-self:flex-start;font-weight:700;border:2px solid var(--ink);border-radius:999px;padding:.55em 1.1em}
-.card .badge{position:absolute;top:-18px;right:20px;width:64px;height:64px;border-radius:50%;background:var(--paper);color:var(--ink);border:3px solid var(--ink);display:grid;place-items:center;transform:translateZ(30px)}
-.card .badge .icon{width:28px;height:28px}
-.also{margin-top:40px;font-size:1.15rem;color:#CFC8F5;max-width:60ch}
 
 /* skills as transit lines */
 .lines{display:grid;gap:56px;margin-top:56px}
@@ -248,19 +227,8 @@ section{scroll-margin-top:80px}
 .line li:last-child::before{border-right:2px solid var(--ink);border-radius:0 6px 6px 0}
 .line li::after{content:"";position:absolute;left:0;top:0;width:28px;height:28px;border-radius:50%;background:var(--white);border:4px solid var(--ink)}
 
-/* off the clock: a fighter-select card plus the hobby list */
-.hob-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr);gap:40px clamp(40px,5vw,72px);align-items:start}
-.fighter{background:var(--ink);color:var(--paper);border-radius:20px;padding:26px 26px 22px;box-shadow:5px 5px 0 var(--cobalt)}
-.fighter-tag{display:inline-block;margin:0 0 14px;background:var(--yellow);color:var(--ink);font-weight:700;font-size:.85rem;padding:.15em .75em;border-radius:999px}
-.fighter-name{font-family:var(--display);font-weight:850;font-size:clamp(2.4rem,4.5vw,3.4rem);line-height:.9;font-variation-settings:"wdth" 85;margin:0 0 6px}
-.fighter-class{color:#CFC8F5;margin:0 0 22px;font-size:1rem}
-.stats{margin:0;display:grid;gap:12px}
-.stats div{display:grid;grid-template-columns:8.5em minmax(0,1fr);gap:10px;align-items:center}
-.stats dt{font-weight:700;font-size:.95rem}
-.stats dd{margin:0;display:flex;align-items:center;gap:10px;min-width:0}
-.bar{flex:1;height:12px;border-radius:3px;overflow:hidden;background:repeating-linear-gradient(90deg,rgba(245,243,255,.16) 0 calc(20% - 3px),transparent calc(20% - 3px) 20%)}
-.bar i{display:block;height:100%;background:repeating-linear-gradient(90deg,var(--yellow) 0 calc(20% - 3px),transparent calc(20% - 3px) 20%);clip-path:inset(0 calc(100% - var(--v) * 20%) 0 0)}
-.val{font-size:.85rem;color:#CFC8F5;white-space:nowrap;min-width:4.5em}
+/* off the clock: the hobby list */
+.hob-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:40px clamp(40px,5vw,72px);align-items:start}
 .hob-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:3px solid var(--ink)}
 .hob-list li{padding:18px 18px 18px 0;border-bottom:2px solid var(--ink);transition:background .35s cubic-bezier(.16,1,.3,1)}
 .hob-list li:nth-child(even){padding-left:18px;border-left:2px solid var(--ink)}
@@ -268,10 +236,6 @@ section{scroll-margin-top:80px}
 .hob-list b{display:block;font-family:var(--display);font-weight:750;font-size:1.25rem;line-height:1.1;font-variation-settings:"wdth" 92;margin-bottom:6px}
 .hob-list p{margin:0;font-size:1rem;color:var(--ink-soft)}
 .hob-list a{color:var(--cobalt);font-weight:700}
-.not-hobbies{margin-top:28px}
-.nh-title{font-weight:700;margin:0 0 8px}
-.not-hobbies ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px 28px;color:var(--ink-soft)}
-.not-hobbies del{font-family:var(--display);font-weight:750;font-size:1.2rem;color:var(--ink);text-decoration-color:var(--orange);text-decoration-thickness:2px;margin-right:.35em}
 
 /* currently card */
 .now{display:block;margin:0 0 22px;padding:12px 16px;background:var(--white);border:2px solid var(--ink);border-radius:14px;font-size:1rem;box-shadow:3px 3px 0 var(--cobalt)}
@@ -280,15 +244,7 @@ section{scroll-margin-top:80px}
 @keyframes live{0%{box-shadow:0 0 0 0 rgba(31,163,122,.55)}70%{box-shadow:0 0 0 9px rgba(31,163,122,0)}100%{box-shadow:0 0 0 0 rgba(31,163,122,0)}}
 
 /* skip layout of far-below sections until they near the viewport (first-paint cost) */
-#research,#lab,#experience,#community,#projects,#skills,#hobbies{content-visibility:auto;contain-intrinsic-size:auto 1100px}
-/* joke tally */
-.tally{margin:clamp(56px,7vw,88px) 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:3px solid var(--ink)}
-.tally div{padding:16px 16px 4px 0;display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:6px}
-.tally div + div{padding-left:16px;border-left:2px solid var(--ink)}
-.tally dd{margin:0;font-family:var(--display);font-weight:850;font-size:clamp(1.5rem,2.6vw,2.3rem);line-height:1;font-variation-settings:"wdth" 85;color:var(--cobalt)}
-.tally div{min-width:0}
-.tally dd.word{font-size:clamp(1.05rem,1.5vw,1.35rem);line-height:1.15;overflow-wrap:anywhere}
-.tally dt{font-size:.92rem;color:var(--ink-soft);line-height:1.35}
+#research,#lab,#experience,#community,#skills,#hobbies{content-visibility:auto;contain-intrinsic-size:auto 1100px}
 
 /* ask me about */
 .asks-title{font-weight:700;margin:0 0 12px}
@@ -297,11 +253,6 @@ section{scroll-margin-top:80px}
 .asks li:hover{animation:wiggle .45s cubic-bezier(.16,1,.3,1)}
 @keyframes wiggle{25%{transform:rotate(-2deg)}60%{transform:rotate(1.5deg)}100%{transform:none}}
 
-/* the occasional glove jab: decorative, never clickable */
-.glove{position:fixed;left:0;top:0;z-index:45;pointer-events:none;display:none}
-.glove svg{width:clamp(64px,8vw,104px);height:auto;display:block}
-.glove-in{position:relative}
-.pow{position:absolute;right:-26px;top:-18px;font-family:var(--display);font-weight:900;font-size:.95rem;color:var(--ink);background:var(--yellow);border:2px solid var(--ink);padding:.1em .45em;border-radius:6px;opacity:0;transform:rotate(-8deg)}
 
 /* contact */
 .contact{background:var(--cobalt);color:var(--white);padding:clamp(90px,12vw,170px) 0 40px;overflow:hidden}
@@ -320,7 +271,6 @@ section{scroll-margin-top:80px}
 .sec::before{content:"";position:absolute;inset:-64px;z-index:-1;pointer-events:none;
   background:radial-gradient(circle,rgba(28,20,70,.11) 1.2px,transparent 1.6px) 0 0/32px 32px,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='560' height='360' viewBox='0 0 560 360'%3E%3Cg fill='none' stroke='%231C1446' stroke-opacity='.07' stroke-width='1.2'%3E%3Cpath d='M-20 60C80 20 160 110 280 70S460 10 580 60'/%3E%3Cpath d='M-20 100C90 60 170 150 290 110S470 50 580 100'/%3E%3Cpath d='M-20 230C100 270 200 180 300 220S480 300 580 240'/%3E%3Cpath d='M-20 270C110 310 210 220 310 260S490 340 580 280'/%3E%3Cpath d='M-20 310C120 350 220 260 320 300S500 380 580 320'/%3E%3C/g%3E%3C/svg%3E") 0 0/560px 360px;
   animation:drift 48s ease-in-out infinite alternate;animation-play-state:paused}
-.projects::before{background:radial-gradient(circle,rgba(245,243,255,.09) 1.2px,transparent 1.6px) 0 0/32px 32px}
 .hero::before,.contact::before{content:"";position:absolute;inset:-25%;z-index:-1;pointer-events:none;
   background:radial-gradient(28% 34% at 22% 30%,rgba(143,211,255,.2),transparent 70%),radial-gradient(30% 36% at 78% 72%,rgba(185,168,255,.22),transparent 70%),radial-gradient(22% 26% at 60% 18%,rgba(255,159,28,.1),transparent 70%);
   animation:glow 22s ease-in-out infinite alternate;animation-play-state:paused}
@@ -328,21 +278,8 @@ section{scroll-margin-top:80px}
 @keyframes drift{from{transform:translate3d(0,0,0)}to{transform:translate3d(-48px,-32px,0)}}
 @keyframes glow{0%{transform:translate3d(0,0,0) rotate(0)}50%{transform:translate3d(4%,-3%,0) rotate(6deg)}100%{transform:translate3d(-3%,4%,0) rotate(-4deg)}}
 
-/* the vibe-coded speech bubble: shows once per visit, pops on click; the wrapper never catches clicks */
-.vibe{position:fixed;left:0;top:0;z-index:40;pointer-events:none;opacity:0;visibility:hidden;display:none}
-.motion .vibe{display:block}
-.vibe-in{pointer-events:auto;cursor:pointer;font-family:inherit;margin:0;display:flex;align-items:center;gap:.45em;background:var(--white);color:var(--ink);border:2px solid var(--ink);border-radius:16px;padding:.5em .8em;font-weight:700;font-size:.92rem;line-height:1.2;white-space:nowrap;box-shadow:3px 3px 0 var(--cobalt);position:relative}
-.vibe-in::after{content:"";position:absolute;left:18px;bottom:-8px;width:12px;height:12px;background:var(--white);border:solid var(--ink);border-width:0 2px 2px 0;transform:rotate(45deg)}
-.vibe svg{width:1.3em;height:1.3em;flex:none}
-.vibe-in:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px}
-.drop{position:absolute;left:0;top:0;width:7px;height:7px;margin:-3.5px 0 0 -3.5px;border-radius:50%;background:var(--sky);border:1.5px solid var(--ink);pointer-events:none}
 
 /* reveals start hidden only with motion; GSAP brings them in */
-@media (max-width:1000px){
-  .tally{grid-template-columns:1fr 1fr}
-  .tally div:nth-child(3){padding-left:0;border-left:0}
-  .tally div:nth-child(n+3){border-top:2px solid var(--ink);margin-top:12px}
-}
 @media (max-width:899px){
   .stage{grid-template-columns:1fr;gap:32px}
   .map{position:relative;top:auto;max-width:420px}
@@ -362,12 +299,7 @@ section{scroll-margin-top:80px}
   .line li:first-child::before{top:14px;border-radius:0}
   .line li:last-child::before{bottom:auto;height:14px;border-radius:0}
   .hob-list{grid-template-columns:1fr}
-  .tally{grid-template-columns:1fr 1fr}
-  .tally div:nth-child(odd){padding-left:0;border-left:0}
-  .tally div:nth-child(even){padding-left:16px;border-left:2px solid var(--ink)}
-  .tally div:nth-child(n+3){border-top:2px solid var(--ink);margin-top:12px}
   .hob-list li:nth-child(even){padding-left:0;border-left:0}
-  .stats div{grid-template-columns:7.2em minmax(0,1fr)}
   .lab .facts div,.community .facts div{grid-template-columns:1fr;gap:2px}
   .pass{grid-template-columns:minmax(0,1fr) 64px;min-height:0}
   .pass-code{font-size:2rem}
@@ -381,7 +313,6 @@ section{scroll-margin-top:80px}
   .nav{max-width:100%}
   .nav{padding:4px}
   .nav a{padding:.45em .34em;font-size:.82rem}
-  .vibe-in{font-size:.78rem;padding:.4em .65em}
   .pro-switch{min-height:40px;padding:0 13px;font-size:.82rem}
   .foot{padding-bottom:56px}
 }
@@ -418,7 +349,6 @@ section{scroll-margin-top:80px}
     <a href="#journey">Journey</a>
     <a href="#research">Research</a>
     <a href="#lab">Lab</a>
-    <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
   <a class="pro-switch" href="/pro/">Professional version</a>
@@ -449,11 +379,10 @@ section{scroll-margin-top:80px}
         <div>
           <p class="hero-full"><b>Sophoanthiraek Rath</b>, Thiraek for short.</p>
           <p class="hero-where"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Tokyo now. Cambodia and Australia twice each before that.</p>
-          <p class="hero-lede"><strong>Civil engineer in training, vibe coder by accident.</strong>By day I study how people move through cities at Shibaura Institute of Technology. In my free time I describe app ideas to Claude. I can't code, I vibe.</p>
+          <p class="hero-lede"><strong>Civil engineer in training, vibe coder by accident.</strong>By day I study how people move through cities at Shibaura Institute of Technology. In my free time I describe app ideas to Claude.</p>
         </div>
         <div class="hero-actions">
           <a class="btn btn-solid magnet" href="#journey"><svg class="icon" aria-hidden="true"><use href="#i-plane"/></svg>See my journey</a>
-          <a class="btn btn-ghost magnet" href="#projects">See what I built</a>
         </div>
       </div>
     </div>
@@ -583,7 +512,7 @@ section{scroll-margin-top:80px}
           <div class="pass-main">
             <span class="pass-leg">Leg 4 of 5 &middot; SYD &rarr; TYO</span>
             <h3>Tokyo</h3>
-            <p>A bachelor's in Civil Engineering at Shibaura Institute of Technology, plus a desk in the Mobility &amp; Infrastructure Laboratory. I now have strong opinions about train transfers.</p>
+            <p>A bachelor's in Civil Engineering at Shibaura Institute of Technology, plus a desk in the Mobility &amp; Infrastructure Laboratory.</p>
             <dl class="pass-meta">
               <div><dt>School</dt><dd>Shibaura Institute of Technology</dd></div>
                             <div><dt>Supervisor</dt><dd>Prof. Yiping Le</dd></div>
@@ -705,7 +634,7 @@ section{scroll-margin-top:80px}
           <dl class="facts">
             <div><dt>My 2026 roles</dt><dd>Public Relations member and Education member. Two teams at once.</dd></div>
             <div><dt>Doing PR</dt><dd>I help with public relations and education for Cambodian students across Japan.</dd></div>
-            <div><dt>Also made</dt><dd>Their new website (it's in my projects below) and the graduation posters.</dd></div>
+            <div><dt>Also made</dt><dd>Their new website and the graduation posters.</dd></div>
           </dl>
           <p class="lab-link"><a class="link-pill" href="https://www.csaj-khmer.org/" target="_blank" rel="noopener">Visit CSAJ<span class="vh"> (opens in a new tab)</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
         </div>
@@ -713,68 +642,14 @@ section{scroll-margin-top:80px}
     </div>
   </section>
 
-  <section class="sec projects" id="projects" aria-labelledby="projects-title">
-    <div class="wrap">
-      <h2 class="sec-title reveal-title" id="projects-title">Projects</h2>
-      <p class="sec-intro">I'm not a developer. I describe the idea, Claude writes the code, and I test it until it works.</p>
-      <ul class="cards">
-        <li class="card" style="--c:var(--orange)">
-          <span class="badge" aria-hidden="true"><svg class="icon"><use href="#i-utensils"/></svg></span>
-          <h3>KhMenu</h3>
-          <p>QR menus and table ordering for restaurants in Cambodia. You order from your phone, the staff get a live ping.</p>
-          <ul class="stack"><li class="lbl">Claude used</li><li>React</li><li>Supabase</li></ul>
-          <a class="go" href="https://kh-emenu.onrender.com" rel="noopener">Open KhMenu <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        </li>
-        <li class="card" style="--c:var(--mint)">
-          <span class="badge" aria-hidden="true"><svg class="icon"><use href="#i-repeat"/></svg></span>
-          <h3>SubWise</h3>
-          <p>Every subscription you forgot about, in one place, plus step-by-step guides to cancel each one.</p>
-          <a class="go" href="https://subwise-nc4x.onrender.com" rel="noopener">Open SubWise <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        </li>
-        <li class="card" style="--c:var(--lilac)">
-          <span class="badge" aria-hidden="true"><svg class="icon"><use href="#i-receipt"/></svg></span>
-          <h3>AI Invoice &amp; BOQ</h3>
-          <p>Describe a job in plain English, get a proper invoice. Describe a project, get a construction Bill of Quantities.</p>
-          <ul class="stack"><li class="lbl">Claude used</li><li>Node</li><li>Express</li><li>AI</li></ul>
-          <a class="go" href="https://github.com/billyRth/invoice-backend" rel="noopener">View on GitHub <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        </li>
-        <li class="card" style="--c:var(--yellow)">
-          <span class="badge" aria-hidden="true"><svg class="icon"><use href="#i-users"/></svg></span>
-          <h3>CSAJ-Khmer</h3>
-          <p>A new website for the Cambodian Students' Association in Japan, the community I'm part of.</p>
-          <a class="go" href="https://csaj-preview.onrender.com" rel="noopener">Open the preview <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        </li>
-        <li class="card" style="--c:var(--sky)">
-          <span class="badge" aria-hidden="true"><svg class="icon"><use href="#i-wallet"/></svg></span>
-          <h3>jeakLuy</h3>
-          <p>A trip expense splitter. The name means "split money" in Khmer.</p>
-          <span class="soon">Private build</span><!-- TODO: jeakLuy live URL -->
-        </li>
-        <li class="card" style="--c:var(--white)">
-          <span class="badge" aria-hidden="true"><svg class="icon"><use href="#i-sparkles"/></svg></span>
-          <h3 class="long">theconvenience<wbr>store</h3>
-          <p>My own Shopify store with a custom theme, run as a small business. It made a profit before I closed it.</p>
-          <ul class="stack"><li class="lbl">Claude used</li><li>Shopify</li><li>Liquid</li></ul>
-          <span class="soon">Closed</span>
-        </li>
-      </ul>
-      <p class="also">I've also made demo sites for small businesses in Phnom Penh, and graduation posters for CSAJ.</p>
-    </div>
-  </section>
-
   <section class="sec" id="skills" aria-labelledby="skills-title">
     <div class="wrap">
       <h2 class="sec-title reveal-title" id="skills-title">Skills</h2>
-      <p class="sec-intro">Four lines: research, vibe coding, engineering tools and the languages I speak.</p>
+      <p class="sec-intro">Three lines: research, engineering tools and the languages I speak.</p>
       <div class="lines">
         <div class="line" style="--c:var(--cobalt)">
           <h3>Research line</h3>
           <ul><li>Transport research</li><li>Survey design</li><li>ArcGIS &amp; Earth Engine</li><li>Python &amp; Biogeme</li><li>Remote sensing</li></ul>
-        </div>
-        <div class="line" style="--c:var(--orange)">
-          <h3>Vibe line</h3>
-          <ul><li>Having ideas</li><li>Describing them to Claude</li><li>Testing what it builds</li><li>Clicking deploy</li><li>Running a Shopify store</li></ul>
-          <p class="line-note">React, Supabase, Node and friends: stuff Claude knows so I don't have to.</p>
         </div>
         <div class="line" style="--c:var(--sky)">
           <h3>Engineering line</h3>
@@ -792,44 +667,17 @@ section{scroll-margin-top:80px}
     <div class="wrap">
       <h2 class="sec-title reveal-title" id="hobbies-title">Off the clock</h2>
       <div class="hob-grid">
-        <div class="fighter">
-          <p class="fighter-tag">Player 1</p>
-          <p class="fighter-name">Thiraek</p>
-          <p class="fighter-class">Class: grappler who vibe-codes</p>
-          <dl class="stats">
-            <div><dt>Grappling</dt><dd><span class="bar" style="--v:4" aria-hidden="true"><i></i></span><span class="val">4/5</span></dd></div>
-            <div><dt>Striking</dt><dd><span class="bar" style="--v:4" aria-hidden="true"><i></i></span><span class="val">4/5</span></dd></div>
-            <div><dt>Dota 2</dt><dd><span class="bar" style="--v:5" aria-hidden="true"><i></i></span><span class="val">~10k hrs</span></dd></div>
-            <div><dt>LARPing</dt><dd><span class="bar" style="--v:5" aria-hidden="true"><i></i></span><span class="val">10/10</span></dd></div>
-            <div><dt>Discord uptime</dt><dd><span class="bar" style="--v:5" aria-hidden="true"><i></i></span><span class="val">5/5</span></dd></div>
-            <div><dt>Japanese</dt><dd><span class="bar" style="--v:2" aria-hidden="true"><i></i></span><span class="val">2/5, rising</span></dd></div>
-          </dl>
-        </div>
         <div>
           <ul class="hob-list">
             <li><b>MMA, kickboxing, grappling</b><p>I'm addicted to combat sports. I train at Fighting Glanz Ikebukuro, <a href="https://reise-fightingglanz.com/" target="_blank" rel="noopener">my gym<span class="vh"> (opens in a new tab)</span></a>.</p></li>
             <li><b>Video games</b><p>Dota 2 and UFC 5. My Dota 2 playtime is creeping up on 10,000 hours.</p></li>
             <li><b>Superheroes</b><p>Marvel and DC, both. At one point I spent hundreds on physical comic books.</p></li>
-            <li><b>Discord with friends</b><p>I hear their voices more than my parents' voices.</p></li>
             <li><b>Learning Japanese</b><p>Every day. Getting better, I hope.</p></li>
             <li><b>Travelling</b><p>See the map above.</p></li>
-            <li><b>Vibe coding</b><p>See my projects above.</p></li>
+            <li><b>Vibe coding</b><p>I describe app ideas to Claude and test them until they work.</p></li>
           </ul>
-          <div class="not-hobbies">
-            <p class="nh-title">Not hobbies</p>
-            <ul>
-              <li><del>Cooking</del> Not happening.</li>
-              <li><del>Cleaning</del> The Roomba handles it.</li>
-            </ul>
-          </div>
         </div>
       </div>
-      <dl class="tally">
-        <div><dt>Papers read</dt><dd class="count" data-n="135">135</dd></div>
-        <div><dt>Lines of code I wrote myself</dt><dd>0</dd></div>
-        <div><dt>Roombas employed</dt><dd class="count" data-n="1">1</dd></div>
-        <div><dt>Countries lived in</dt><dd class="count" data-n="3">3</dd></div>
-      </dl>
     </div>
   </section>
 
@@ -855,8 +703,6 @@ section{scroll-margin-top:80px}
   </section>
 </main>
 
-<div class="glove" aria-hidden="true"><div class="glove-in"><svg viewBox="0 0 120 80"><rect x="2" y="22" width="30" height="36" rx="6" fill="#F5F3FF" stroke="#1C1446" stroke-width="4"/><path d="M30 18c0-8 8-14 20-14h30c20 0 36 14 36 36s-16 36-36 36H50c-12 0-20-6-20-14z" fill="#FF9F1C" stroke="#1C1446" stroke-width="4" stroke-linejoin="round"/><path d="M58 44c8 0 16-4 20-10" fill="none" stroke="#1C1446" stroke-width="4" stroke-linecap="round"/><path d="M84 14c10 3 18 12 20 22" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="5" stroke-linecap="round"/></svg><span class="pow">POW</span></div></div>
-<div class="vibe"><button type="button" class="vibe-in" aria-label="Of course I vibe coded this. Pop the bubble">Of course I vibe coded this<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#FFD43B" stroke="#1C1446" stroke-width="2"/><circle cx="9" cy="10" r="1.3" fill="#1C1446"/><circle cx="15" cy="10" r="1.3" fill="#1C1446"/><path d="M8 14.5c1 1.4 2.4 2 4 2s3-.6 4-2" fill="none" stroke="#1C1446" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>
 
 <script>
 /* Motion libraries load after the page has painted, so they never delay first paint. */
@@ -980,19 +826,7 @@ function initMotion() {
     gsap.from(p.children, { y: 30, opacity: 0, stagger: .1, duration: .9, ease: 'expo.out', scrollTrigger: { trigger: p, start: 'top 85%' } });
   });
 
-  /* project cards: rise in, lean slightly toward the cursor */
-  gsap.from('.card', { y: 50, opacity: 0, duration: .9, stagger: .08, ease: 'expo.out', scrollTrigger: { trigger: '.cards', start: 'top 80%' } });
   if (finePointer) {
-    document.querySelectorAll('.card').forEach(function (card) {
-      card.addEventListener('pointermove', function (e) {
-        var r = card.getBoundingClientRect();
-        var px = (e.clientX - r.left) / r.width - .5, py = (e.clientY - r.top) / r.height - .5;
-        gsap.to(card, { rotationY: px * 6, rotationX: -py * 6, duration: .6, ease: 'power4.out', overwrite: 'auto' });
-      });
-      card.addEventListener('pointerleave', function () {
-        gsap.to(card, { rotationY: 0, rotationX: 0, duration: .8, ease: 'expo.out', overwrite: 'auto' });
-      });
-    });
     /* magnetic buttons */
     document.querySelectorAll('.magnet').forEach(function (b) {
       b.addEventListener('pointermove', function (e) {
@@ -1003,46 +837,7 @@ function initMotion() {
     });
   }
 
-  /* joke tally: the real numbers count up */
-  gsap.utils.toArray('.tally .count').forEach(function (el) {
-    var o = { v: 0 }, n = +el.dataset.n;
-    gsap.to(o, { v: n, duration: 1.4, ease: 'expo.out', onUpdate: function () { el.textContent = Math.round(o.v); }, scrollTrigger: { trigger: '.tally', start: 'top 85%' } });
-  });
-
-  /* the occasional glove jab: first after 20s, then every 45-90s, max 4, never while scrolling fast or hidden, never over links/buttons */
-  var glove = document.querySelector('.glove'), gin = glove.querySelector('.glove-in'), pow = glove.querySelector('.pow');
-  var jabs = 0, lastFast = 0;
-  ScrollTrigger.create({ onUpdate: function (self) { if (Math.abs(self.getVelocity()) > 600) lastFast = Date.now(); } });
-  function clearSpot(y, h, fromLeft, reach) {
-    for (var x = 0; x <= reach; x += 24) for (var dy = 0; dy <= h; dy += h / 2) {
-      var el = document.elementFromPoint(fromLeft ? x + 2 : innerWidth - x - 2, y + dy);
-      if (el && el.closest('a, button, .site-head, .hero-actions')) return false;
-    }
-    return true;
-  }
-  function jab() {
-    if (jabs >= 4) return;
-    if (document.hidden || Date.now() - lastFast < 1500) { gsap.delayedCall(6, jab); return; }
-    glove.style.display = 'block';
-    var w = glove.offsetWidth, h = glove.offsetHeight, fromLeft = Math.random() < .5, reach = Math.min(w * .9, innerWidth * .25), y, tries = 0;
-    do { y = gsap.utils.random(110, innerHeight - h - 40); } while (!clearSpot(y, h, fromLeft, reach) && ++tries < 6);
-    if (tries >= 6) { glove.style.display = 'none'; gsap.delayedCall(10, jab); return; }
-    jabs++;
-    var out = fromLeft ? -w - 10 : innerWidth + 10, hit = fromLeft ? reach - w : innerWidth - reach;
-    gsap.set(glove, { x: out, y: y, scaleX: fromLeft ? 1 : -1 });
-    gsap.set(pow, { scaleX: fromLeft ? 1 : -1 });
-    gsap.timeline({ onComplete: function () { glove.style.display = 'none'; if (jabs < 4) gsap.delayedCall(gsap.utils.random(45, 90), jab); } })
-      .to(glove, { x: hit, duration: .18, ease: 'power4.in' })
-      .to(gin, { scaleX: .88, scaleY: 1.1, duration: .06, ease: 'power2.out', transformOrigin: '100% 50%' })
-      .to(pow, { opacity: 1, duration: .1, ease: 'expo.out' }, '<')
-      .to(gin, { scaleX: 1, scaleY: 1, duration: .2, ease: 'expo.out' })
-      .to(pow, { opacity: 0, duration: .25 }, '+=.15')
-      .to(glove, { x: out, duration: .35, ease: 'expo.in' }, '<');
-  }
-  gsap.delayedCall(gsap.utils.random(20, 28), jab);
-
-  /* off the clock: stat bars fill in, hobbies rise in */
-  gsap.from('.bar i', { clipPath: 'inset(0 100% 0 0)', duration: 1.1, stagger: .08, ease: 'expo.out', scrollTrigger: { trigger: '.fighter', start: 'top 75%' } });
+  /* off the clock: hobbies rise in */
   gsap.from('.hob-list li', { y: 24, opacity: 0, duration: .8, stagger: .06, ease: 'expo.out', scrollTrigger: { trigger: '.hob-list', start: 'top 82%' } });
 
   /* skills: transit lines lay track, stations pop */
@@ -1065,39 +860,6 @@ function initMotion() {
   /* ambient backgrounds only animate while their section is on screen */
   var io = new IntersectionObserver(function (es) { es.forEach(function (e) { e.target.classList.toggle('is-live', e.isIntersecting); }); });
   document.querySelectorAll('.sec, .hero, .contact').forEach(function (el) { io.observe(el); });
-
-  /* speech bubble: fades in after a few seconds, then wanders the viewport on a lazy random path */
-  var vibe = document.querySelector('.vibe'), vin = vibe.querySelector('.vibe-in');
-  function spot() {
-    var m = innerWidth < 600 ? 12 : 32, w = vibe.offsetWidth, h = vibe.offsetHeight;
-    return { x: gsap.utils.random(m, Math.max(m, innerWidth - w - m)), y: gsap.utils.random(84, Math.max(84, innerHeight - h - m - 64)) };
-  }
-  function wander() { var s = spot(); gsap.to(vibe, { x: s.x, y: s.y, duration: gsap.utils.random(6, 9), ease: 'sine.inOut', onComplete: wander }); }
-  function gone() { gsap.killTweensOf([vibe, vin]); vibe.remove(); }
-  gsap.set(vibe, spot());
-  gsap.to(vibe, { autoAlpha: 1, duration: 1.2, ease: 'expo.out', delay: 3.5, onStart: wander });
-  var bob = gsap.fromTo(vin, { rotation: -3, y: -3 }, { rotation: 3, y: 3, duration: 2.6, ease: 'sine.inOut', yoyo: true, repeat: -1 });
-  /* it leaves on its own after ~22s, and never comes back this visit */
-  var leave = gsap.delayedCall(26, function () {
-    bob.kill();
-    gsap.to(vin, { scale: .6, opacity: 0, duration: .6, ease: 'expo.in', onComplete: gone });
-  });
-  /* click (or Enter/Space): squash, then burst like a soap bubble */
-  vin.addEventListener('click', function () {
-    leave.kill(); bob.kill(); gsap.killTweensOf(vibe);
-    vin.disabled = true;
-    var r = vin.getBoundingClientRect(), vr = vibe.getBoundingClientRect();
-    var cx = r.left - vr.left + r.width / 2, cy = r.top - vr.top + r.height / 2;
-    for (var i = 0; i < 10; i++) {
-      var d = document.createElement('span'); d.className = 'drop'; vibe.appendChild(d);
-      var a = i / 10 * Math.PI * 2 + Math.random() * .4, dist = r.width / 2 + gsap.utils.random(18, 40);
-      gsap.fromTo(d, { x: cx, y: cy, scale: 1, opacity: 1 }, { x: cx + Math.cos(a) * dist, y: cy + Math.sin(a) * dist * .7, scale: .3, opacity: 0, duration: .42, delay: .09, ease: 'expo.out' });
-    }
-    gsap.timeline({ onComplete: gone })
-      .to(vin, { scaleX: 1.12, scaleY: .86, rotation: 0, duration: .09, ease: 'power2.out' })
-      .to(vin, { scale: 1.35, opacity: 0, duration: .22, ease: 'expo.out' })
-      .to({}, { duration: .15 });
-  });
 
   ScrollTrigger.refresh();
   /* sections render lazily (content-visibility), so re-measure when the page height settles */
@@ -1134,7 +896,7 @@ function initMotion() {
   <p class="pick-kicker">Hi, I'm Thiraek.</p>
   <h2 class="pick-title" id="pick-title">Which version of me do you want?</h2>
   <div class="pick-opts">
-    <a class="pick-opt" href="/" data-v="playful"><b>Playful</b><span>Jokes, animations, Dota hours. The fun one.</span></a>
+    <a class="pick-opt" href="/" data-v="playful"><b>Playful</b><span>Animations, hobbies, Dota hours. The fun one.</span></a>
     <a class="pick-opt" href="/pro/" data-v="pro"><b>Professional</b><span>Research, education, experience. The one for professors.</span></a>
   </div>
   <p class="pick-note">You can switch any time.</p>
