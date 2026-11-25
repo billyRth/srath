@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sophoanthiraek (Thiraek) Rath | Civil engineering student and vibe coder</title>
-<meta name="description" content="I'm Sophoanthiraek Rath, Thiraek for short, a Cambodian civil engineering student in Tokyo. I research transport and urban mobility, and after hours I vibe-code apps with Claude. I describe, it codes.">
+<title>Sophoanthiraek (Thiraek) Rath | Civil engineering student</title>
+<meta name="description" content="I'm Sophoanthiraek Rath, Thiraek for short, a Cambodian civil engineering student in Tokyo. I research transport and urban mobility.">
 <link rel="canonical" href="https://srath.onrender.com/">
 <meta name="theme-color" content="#2A22C9">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://srath.onrender.com/">
-<meta property="og:title" content="Sophoanthiraek (Thiraek) Rath | Civil engineering student and vibe coder">
-<meta property="og:description" content="Cambodia, then Australia, then Japan: my transport research, my papers and the apps I vibe-code.">
+<meta property="og:title" content="Sophoanthiraek (Thiraek) Rath | Civil engineering student">
+<meta property="og:description" content="Cambodia, then Australia, then Japan: my transport research and my papers.">
 <meta property="og:site_name" content="Thiraek Rath">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -227,15 +227,6 @@ section{scroll-margin-top:80px}
 .line li:last-child::before{border-right:2px solid var(--ink);border-radius:0 6px 6px 0}
 .line li::after{content:"";position:absolute;left:0;top:0;width:28px;height:28px;border-radius:50%;background:var(--white);border:4px solid var(--ink)}
 
-/* off the clock: the hobby list */
-.hob-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:40px clamp(40px,5vw,72px);align-items:start}
-.hob-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:3px solid var(--ink)}
-.hob-list li{padding:18px 18px 18px 0;border-bottom:2px solid var(--ink);transition:background .35s cubic-bezier(.16,1,.3,1)}
-.hob-list li:nth-child(even){padding-left:18px;border-left:2px solid var(--ink)}
-.hob-list li:hover{background:rgba(185,168,255,.18)}
-.hob-list b{display:block;font-family:var(--display);font-weight:750;font-size:1.25rem;line-height:1.1;font-variation-settings:"wdth" 92;margin-bottom:6px}
-.hob-list p{margin:0;font-size:1rem;color:var(--ink-soft)}
-.hob-list a{color:var(--cobalt);font-weight:700}
 
 /* currently card */
 .now{display:block;margin:0 0 22px;padding:12px 16px;background:var(--white);border:2px solid var(--ink);border-radius:14px;font-size:1rem;box-shadow:3px 3px 0 var(--cobalt)}
@@ -244,7 +235,7 @@ section{scroll-margin-top:80px}
 @keyframes live{0%{box-shadow:0 0 0 0 rgba(31,163,122,.55)}70%{box-shadow:0 0 0 9px rgba(31,163,122,0)}100%{box-shadow:0 0 0 0 rgba(31,163,122,0)}}
 
 /* skip layout of far-below sections until they near the viewport (first-paint cost) */
-#research,#lab,#experience,#community,#skills,#hobbies{content-visibility:auto;contain-intrinsic-size:auto 1100px}
+#research,#lab,#experience,#community,#skills{content-visibility:auto;contain-intrinsic-size:auto 1100px}
 
 /* ask me about */
 .asks-title{font-weight:700;margin:0 0 12px}
@@ -286,7 +277,7 @@ section{scroll-margin-top:80px}
   .map svg{max-height:52svh}
 }
 @media (max-width:820px){
-  .hero-sub,.about-grid,.lab-grid,.hob-grid{grid-template-columns:1fr}
+  .hero-sub,.about-grid,.lab-grid{grid-template-columns:1fr}
   .hero-actions{justify-content:flex-start}
   .pub{grid-template-columns:1fr}
   .pub-status{justify-self:start;text-align:left}
@@ -298,8 +289,6 @@ section{scroll-margin-top:80px}
   .line li::before{left:9px;right:auto;top:0;bottom:0;height:auto;width:10px;border-block:0;border-inline:2px solid var(--ink)}
   .line li:first-child::before{top:14px;border-radius:0}
   .line li:last-child::before{bottom:auto;height:14px;border-radius:0}
-  .hob-list{grid-template-columns:1fr}
-  .hob-list li:nth-child(even){padding-left:0;border-left:0}
   .lab .facts div,.community .facts div{grid-template-columns:1fr;gap:2px}
   .pass{grid-template-columns:minmax(0,1fr) 64px;min-height:0}
   .pass-code{font-size:2rem}
@@ -379,7 +368,7 @@ section{scroll-margin-top:80px}
         <div>
           <p class="hero-full"><b>Sophoanthiraek Rath</b>, Thiraek for short.</p>
           <p class="hero-where"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Tokyo now. Cambodia and Australia twice each before that.</p>
-          <p class="hero-lede"><strong>Civil engineer in training, vibe coder by accident.</strong>By day I study how people move through cities at Shibaura Institute of Technology. In my free time I describe app ideas to Claude.</p>
+          <p class="hero-lede"><strong>Civil engineer in training.</strong> I study how people move through cities at Shibaura Institute of Technology.</p>
         </div>
         <div class="hero-actions">
           <a class="btn btn-solid magnet" href="#journey"><svg class="icon" aria-hidden="true"><use href="#i-plane"/></svg>See my journey</a>
@@ -390,8 +379,8 @@ section{scroll-margin-top:80px}
 
   <div class="ticker" aria-hidden="true">
     <div class="ticker-track">
-      <span>Transport research <b>/</b> Urban mobility <b>/</b> GIS and remote sensing <b>/</b> Vibe coding <b>/</b> ខ្មែរ <b>/</b> English <b>/</b> 日本語 <b>/</b></span>
-      <span>Transport research <b>/</b> Urban mobility <b>/</b> GIS and remote sensing <b>/</b> Vibe coding <b>/</b> ខ្មែរ <b>/</b> English <b>/</b> 日本語 <b>/</b></span>
+      <span>Transport research <b>/</b> Urban mobility <b>/</b> GIS and remote sensing <b>/</b> ខ្មែរ <b>/</b> English <b>/</b> 日本語 <b>/</b></span>
+      <span>Transport research <b>/</b> Urban mobility <b>/</b> GIS and remote sensing <b>/</b> ខ្មែរ <b>/</b> English <b>/</b> 日本語 <b>/</b></span>
     </div>
   </div>
 
@@ -400,7 +389,7 @@ section{scroll-margin-top:80px}
       <h2 class="sec-title reveal-title" id="about-title">About</h2>
       <div class="about-grid">
         <div>
-          <p class="about-big split-words">I'm a Cambodian civil engineering student in my fourth year at Shibaura Institute of Technology in Tokyo. I research how cities move in the Mobility &amp; Infrastructure Laboratory. After hours I vibe-code apps: I come up with the ideas and Claude writes the code.</p>
+          <p class="about-big split-words">I'm a Cambodian civil engineering student in my fourth year at Shibaura Institute of Technology in Tokyo. I research how cities move in the Mobility &amp; Infrastructure Laboratory.</p>
           <figure class="idphoto">
             <img src="thiraek.webp" width="215" height="229" alt="Thiraek Rath" loading="lazy" decoding="async">
             <figcaption>That's me<small>Sophoanthiraek Rath</small></figcaption>
@@ -663,24 +652,6 @@ section{scroll-margin-top:80px}
     </div>
   </section>
 
-  <section class="sec hobbies" id="hobbies" aria-labelledby="hobbies-title">
-    <div class="wrap">
-      <h2 class="sec-title reveal-title" id="hobbies-title">Off the clock</h2>
-      <div class="hob-grid">
-        <div>
-          <ul class="hob-list">
-            <li><b>MMA, kickboxing, grappling</b><p>I'm addicted to combat sports. I train at Fighting Glanz Ikebukuro, <a href="https://reise-fightingglanz.com/" target="_blank" rel="noopener">my gym<span class="vh"> (opens in a new tab)</span></a>.</p></li>
-            <li><b>Video games</b><p>Dota 2 and UFC 5. My Dota 2 playtime is creeping up on 10,000 hours.</p></li>
-            <li><b>Superheroes</b><p>Marvel and DC, both. At one point I spent hundreds on physical comic books.</p></li>
-            <li><b>Learning Japanese</b><p>Every day. Getting better, I hope.</p></li>
-            <li><b>Travelling</b><p>See the map above.</p></li>
-            <li><b>Vibe coding</b><p>I describe app ideas to Claude and test them until they work.</p></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="contact on-cobalt" id="contact" aria-labelledby="contact-title">
     <div class="wrap">
       <h2 class="contact-title" id="contact-title" aria-label="Say hello">
@@ -690,7 +661,6 @@ section{scroll-margin-top:80px}
       <p class="asks-title">Ask me about</p>
       <ul class="asks">
         <li>Why Tokyo trains beat Sydney trains</li>
-        <li>How I vibe coded a business</li>
         <li>MMA and combat sports</li>
         <li>Khmer food spots in Tokyo</li>
       </ul>
@@ -837,8 +807,6 @@ function initMotion() {
     });
   }
 
-  /* off the clock: hobbies rise in */
-  gsap.from('.hob-list li', { y: 24, opacity: 0, duration: .8, stagger: .06, ease: 'expo.out', scrollTrigger: { trigger: '.hob-list', start: 'top 82%' } });
 
   /* skills: transit lines lay track, stations pop */
   gsap.utils.toArray('.line').forEach(function (line) {
@@ -896,7 +864,7 @@ function initMotion() {
   <p class="pick-kicker">Hi, I'm Thiraek.</p>
   <h2 class="pick-title" id="pick-title">Which version of me do you want?</h2>
   <div class="pick-opts">
-    <a class="pick-opt" href="/" data-v="playful"><b>Playful</b><span>Animations, hobbies, Dota hours. The fun one.</span></a>
+    <a class="pick-opt" href="/" data-v="playful"><b>Playful</b><span>Animations and my journey. The fun one.</span></a>
     <a class="pick-opt" href="/pro/" data-v="pro"><b>Professional</b><span>Research, education, experience. The one for professors.</span></a>
   </div>
   <p class="pick-note">You can switch any time.</p>
